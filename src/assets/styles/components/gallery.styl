@@ -1,0 +1,223 @@
+.gallery
+  height 70vh
+  display flex
+  justify-content center
+  @media $mobile
+    height 1049rem
+  &__cover
+    background $red
+    mix-blend-mode color
+    width 529rem
+    height 100vh
+    position: absolute
+    top 0
+    left 0%
+    z-index -3
+    transform translateX(0%)
+    transition all 0.8s ease
+    @media $mobile
+      width 100%
+      height 436rem
+
+  &__title
+    position absolute
+    left 47%
+    top 40rem
+    
+    &-text
+      font-family $ptSansNarrowBold
+      font-size 46rem
+      text-align center
+      color $white
+      @media $mobile
+        display none
+
+  &__photos
+    size(1200rem, 646rem)
+    position relative
+    transition all 1s ease 1.2s
+    opacity 1
+    @media $mobile
+      top 60rem
+
+    &-inner
+      display flex
+      @media $mobile
+        flex-direction column
+        justify-content start
+        align-items center
+        margin-bottom 0rem
+      & .gallery__photo:nth-child(1)
+        @media $mobile
+          margin 10rem 0rem 
+        &>.gallery__photo-img-wrapper
+          top 0
+          left 53rem
+          @media $mobile
+            top unset
+            left unset
+            &>.gallery__photo-img
+              size(255rem)
+
+      & .gallery__photo:nth-child(2)
+        @media $mobile
+          margin 10rem 0rem 
+        &>.gallery__photo-img-wrapper
+          top 233rem
+          left 123rem
+          @media $mobile
+            top unset
+            left unset
+        
+          &>.gallery__photo-img
+            size(255rem)
+
+
+      & .gallery__photo:nth-child(3)
+        @media $mobile
+          margin 10rem 0rem 
+        &>.gallery__photo-img-wrapper
+          top 24rem
+          right 432rem
+          @media $mobile
+            top unset
+            right unset
+        
+          &>.gallery__photo-img
+            size(255rem)
+
+
+      & .gallery__photo:nth-child(4)
+        @media $mobile
+          margin 10rem 0rem 
+        &>.gallery__photo-img-wrapper
+          top 291rem
+          right 152rem
+          @media $mobile
+            display none
+          &>.gallery__photo-img
+            size(255rem)
+        
+      
+
+      & .gallery__photo:nth-child(5)
+        &>.gallery__photo-img-wrapper
+          top 61rem
+          right 63rem
+          @media $mobile
+            display none
+            margin 100rem 0rem 0rem 0rem
+
+
+  &__photo
+    size(255rem)
+    
+  &__photo-img-wrapper
+    cursor pointer
+    position absolute
+    overflow hidden
+    transition all 1s ease
+    perspective 250rem
+    &:hover
+      transform rotateY(180deg)
+      &::after, &::before
+        opacity: 0
+
+
+  
+  &__photo-img-wrapper::before
+    content ' '
+    width 255rem
+    height 255rem
+    display block
+    position absolute
+    top 0rem
+    left 0rem
+    background $blue
+    z-index 10
+    mix-blend-mode color
+    transition all 0.4s ease .2s
+    
+  
+  &__photo-img-wrapper::after
+    content ' '
+    width 255rem
+    height 255rem
+    display block
+    position absolute
+    top 0rem
+    left 0rem
+    background $aquaBlue
+    z-index 10
+    mix-blend-mode hard-light
+    transition all 0.4s ease .2s
+    &:hover
+      opacity: 0
+  
+  &__photo-img
+    size(173rem)
+    position relative
+
+  &__btn
+    color white
+    font-size 22rem
+    font-family $ptSansNarrow
+    &-wrapper
+      position absolute
+      right 482rem
+      bottom 128rem
+      cursor pointer
+      size(152rem, 40rem)
+      opacity 0.7
+      transition all 0.4s ease
+      @media $mobile
+        right 110rem
+        bottom -250rem
+      
+      &:hover
+        background $white
+      &:hover .gallery__btn
+        color $black
+    &-inner
+      display flex
+      justify-content center
+      align-items center
+      width 100%
+      height 100%
+      border 1px solid $white
+
+   &__btn-return
+    width 197rem
+    height 25rem
+    font-size 14rem
+    line-height 24rem
+    font-family $ptSansNarrow
+    color white
+    background-image: url("data:image/svg+xml,%3Csvg width='43' height='8' viewBox='0 0 43 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M42.3536 4.48312C42.5488 4.28786 42.5488 3.97127 42.3536 3.77601L39.1716 0.594032C38.9763 0.39877 38.6597 0.39877 38.4645 0.594032C38.2692 0.789294 38.2692 1.10588 38.4645 1.30114L41.2929 4.12957L38.4645 6.95799C38.2692 7.15325 38.2692 7.46984 38.4645 7.6651C38.6597 7.86036 38.9763 7.86036 39.1716 7.6651L42.3536 4.48312ZM-4.37114e-08 4.62956L42 4.62957L42 3.62957L4.37114e-08 3.62956L-4.37114e-08 4.62956Z' fill='white'/%3E%3C/svg%3E%0A");
+    background-repeat no-repeat
+    background-position 108rem center
+    text-align start
+    &-wrapper
+      opacity 0.7
+      width 197rem
+      height 25rem
+      position absolute
+      left -90rem
+      top 230rem
+      transform rotate(-90deg)
+      @media $mobile
+        transform unset
+        top 910rem
+        left 110rem
+      &:hover
+        opacity 0.9
+      &:active
+        opacity 0.5
+
+.hidden .gallery__photos
+  transition all 1s ease 1s
+  opacity 0
+
+.hidden .gallery__cover
+  transform translateX(-100%)
+  transition all 0.8s ease

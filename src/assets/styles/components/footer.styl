@@ -1,0 +1,86 @@
+.footer
+  h(15vh)
+  margin 0rem 0rem 0rem 40rem
+  opacity 0
+  animation opacityOff 1s ease alternate 3s
+  animation-fill-mode forwards
+  @media $mobile
+    h(10vh)
+    // height -webkit-fill-available
+  &__inner
+    size(100%, 100%)
+    
+    padding-right 10rem
+    padding-bottom 10rem
+    display flex
+    flex-direction column
+    justify-content flex-end
+  
+  &__items
+    display flex
+    justify-content space-between
+    align-items center
+    @media $mobile
+      justify-content flex-end
+
+    &_reverse
+      justify-content flex-end
+
+  &__logo-item
+    w(133rem)
+    h(81rem)
+    @media $mobile
+      display none
+
+    &_logo-alc-zero
+      w(77rem)
+      h(77rem)
+      display inline
+      @media $mobile
+        size(60rem)
+      
+  
+  &__scroll-btn
+    w(117rem)
+    h(30rem)
+    font-size 14rem
+    line-height 24rem
+    color $white
+    display flex
+    justify-content center
+    align-items center
+    font-family $ptSansNarrow
+    cursor pointer
+    transition 0.2s ease
+    -moz-user-select: none
+    -khtml-user-select: none
+    user-select: none
+    position relative
+    @media $mobile
+      margin-right 58rem
+    &:hover
+      opacity 0.5
+
+  &__scroll-btn:before
+    content ' '
+    display block
+    width 1px
+    height 57rem
+    position absolute
+    background white
+    opacity 0.3
+    bottom -57rem
+
+  &__scroll-btn:after
+    content ' '
+    display block
+    width 1px
+    height 13rem
+    position absolute
+    background white
+    bottom -10rem
+    transform translateY(30rem)
+    animation surfacingLine 1s linear infinite
+  
+  &__scroll-btn_disable
+    display none

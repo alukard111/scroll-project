@@ -1,0 +1,228 @@
+
+.rules::before
+  content ' '
+  display block
+  width 340rem
+  height 100vh
+  background-image: url('./assets/imgs/background/faсe.png')
+  background-size cover
+  background-position center
+  position: absolute
+  top 0
+  left -2rem
+  z-index -1
+  transition all 0.5s ease 1s
+  transform translateX(0%)
+  @media (max-aspect-ratio: 8/5)
+    width 550rem
+  @media $mobile
+    width 228rem
+    height 450rem
+    top unset
+    bottom 0rem
+
+.rules__main-challenge-desc:nth-child(1)
+  transform translateY(0%)
+  transition all 0.5s ease 2s
+  &>img
+    margin-top 15rem
+    width 100rem
+    height 130rem
+    @media $mobile
+      width 57rem
+      height 82rem
+
+  &>span, &>img
+    @media $mobile
+      transition transform 0.5s ease 2s
+
+.rules__main-challenge-desc:nth-child(2)
+  transform translateY(0%)
+  transition all 0.5s ease 2.5s
+  width 270rem
+
+  @media $mobile
+    margin 30rem 0rem 0rem 105rem 
+    
+
+  &>img
+    margin-right 10rem
+    width 74rem
+    height 109rem
+    @media $mobile
+      width 54rem
+      height 76rem
+
+  &>span, &>img
+    @media $mobile
+      transition transform 0.5s ease 2.5s
+
+.rules__main-challenge-desc:nth-child(3)
+  transform translateY(0%)
+  transition all 0.5s ease 3s
+  @media $mobile
+    width 226rem
+    margin-left 146rem
+
+  &>img
+    width 180rem
+    height 180rem
+    @media $mobile
+      width 125rem
+      height 125rem
+      
+  &>span, &>img
+    @media $mobile
+      transition transform 0.5s ease 3s
+
+.rules
+  display flex
+  @media $mobile
+    height auto
+    min-height 649rem
+  &__cover
+    background $red
+    mix-blend-mode color
+    width 411rem
+    height 100vh
+    position: absolute
+    top 0
+    left 0
+    z-index -3
+    transform translateX(0)
+    transition transform 1s ease
+    @media (max-aspect-ratio: 8/5)
+      width 480rem
+    @media $mobile
+      top unset
+      bottom 0rem
+      height 143rem
+
+    
+  &__marquee
+    width 100%
+    height 185rem
+    background-image url('./assets/imgs/background/hashtag.png')
+    background-size cover
+    background-repeat repeat-x
+    position absolute
+    top 100rem
+    z-index -2
+    transition all .2s ease .7s
+    opacity 1
+    animation tickerS 5s linear infinite
+    @media $mobile
+      top unset
+      bottom 77rem
+      height 50rem
+    
+  &__main
+    width 100%
+    height 350rem
+    color $white
+    display flex
+    justify-content center
+    position relative
+    top 160rem
+    left 160rem
+    @media (max-aspect-ratio: 8/5)
+      top 177rem
+      left 340rem
+    @media $mobile
+      top 0rem
+      left 280rem
+
+    &-inner
+      width 1203rem
+      // 
+      @media $mobile
+        margin-right 520rem
+
+    &-title
+      margin-bottom 15rem
+      overflow hidden
+      @media $mobile
+        padding 10rem 0rem 0rem 0rem
+        width 300rem
+
+      &-text
+        transition all 1s ease 1.4s
+        transform translateY(0%)
+        font-size 44rem
+        font-family $ptSansNarrow
+        @media $mobile
+          font-size 30rem
+          line-height 35rem
+  
+    &-challenge
+      &-inner
+        overflow hidden
+        display flex
+        justify-content start
+        @media $mobile
+          flex-direction column
+          margin-top 55rem
+
+      &-desc
+        display flex
+        align-items center
+        width 319rem
+        @media $mobile
+          overflow hidden
+       
+      &-desc-text
+        font-family $ptSansNarrow
+        font-size 20rem
+        @media $mobile
+          font-size 16rem
+          line-height 18rem
+
+
+      &-info
+        margin-top 50rem
+        
+        &-link
+          margin-left -90rem
+          cursor pointer
+          color $white
+          font-family $ptSansNarrow
+          font-size: 12rem
+          line-height: 24rem
+          opacity 0.7
+          text-decoration underline
+          @media $mobile
+            margin-left 170rem
+   
+
+ 
+
+.hidden .rules__cover
+  transition transform 1s ease 
+  transform translateX(-100%)
+
+.hidden .rules__marquee
+  transition transform 1s ease
+  opacity 0
+
+.hidden.rules::before
+  transition transform 1s ease
+  transform translateX(-100%)
+
+.hidden .rules__main-title-text
+  transition transform 1s ease 
+  transform translateY(-120%)
+
+.hidden .rules__main-challenge-desc:nth-child(1),
+.hidden .rules__main-challenge-desc:nth-child(2),
+.hidden .rules__main-challenge-desc:nth-child(3)
+  transition transform 1s ease .3s
+  transform translateY(-100%)
+  @media $mobile
+    transform translateY(0%)
+
+.hidden .rules__main-challenge-desc:nth-child(1)>*,
+.hidden .rules__main-challenge-desc:nth-child(2)>*,
+.hidden .rules__main-challenge-desc:nth-child(3)>*
+  @media $mobile
+    transition transform 1s ease .3s
+    transform translateY(-200rem)

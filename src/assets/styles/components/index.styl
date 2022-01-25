@@ -1,0 +1,235 @@
+.index__background-img-wrapper
+  position absolute
+  width 100%
+  height 100%
+.index__background-img-wrapper img:nth-child(1)
+  display block
+  position absolute
+  bottom -206rem 
+  top unset 
+  left 130rem 
+  z-index: -5
+  width 448rem
+  height 856rem
+  transition transform 1s linear 2s
+  transform translateY(0%)
+  @media $mobile
+    transition transform 1s linear 3s
+    transform rotate(-20deg)
+    width 175rem
+    height 323rem
+    bottom 10rem 
+    left -20rem  
+
+.img-wrapper
+  transition transform 1s linear
+  width 100%
+  height 100%
+
+.bottle
+  position absolute !important
+  bottom -206rem !important
+  top unset !important
+  left 130rem !important
+  transition unset !important
+  @media $mobile
+    bottom 10rem !important
+    left -20rem  !important
+
+.index__background-img-wrapper img:nth-child(2)
+  display block
+  position absolute
+  top 218rem
+  left 580rem
+  width 397rem
+  height 333rem
+  transform scale(1)
+  opacity 1
+  z-index 1
+  transition transform 1s, opacity 1s
+  // transition-delay 2.5s
+  transition-timing-function ease
+  @media $mobile
+    width 298rem
+    height 251rem
+    top 0rem
+    left unset
+    right -27rem
+    transform rotate(13deg)
+
+
+.washer
+  position absolute !important
+  bottom unset !important
+  top 218rem!important
+  left 580rem !important
+  transition none !important
+  @media $mobile
+    top 0rem !important
+    left unset !important
+    right -27rem !important
+
+.index
+  h(70vh)
+  font-size 100rem
+  @media $mobile
+    height auto
+  &__cover
+    background $red
+    mix-blend-mode color
+    width 380rem
+    height 100vh
+    position: absolute
+    top 0
+    right 0
+    z-index -3
+    transition transform 1s ease
+    transform: translateX(0%)
+    @media $mobile
+      width 100%
+      max-height 261rem
+      height 46%
+      right unset
+      top 0
+
+       
+  &__inner
+    position relative
+    @media $mobileS
+      display flex
+      flex-direction column
+      justify-content center
+      align-items start
+    @media $mobile
+      margin-top 45rem
+      height 400rem
+      display flex
+      flex-direction column
+      justify-content space-between
+      align-items start
+
+  &__title
+    color $white
+    width 100%
+    font-size 140rem
+    font-family $dinProBold
+    text-transform uppercase
+    line-height 140rem
+    letter-spacing 0.18em
+    padding 0rem 9rem 0rem 60rem
+    position relative
+    @media $mobile
+      padding 0rem 9rem 0rem 20rem
+      line-height 50rem
+      font-size 47rem
+      letter-spacing unset
+
+    &-slogan-wrapper
+      width 100%
+      height 100%
+      overflow hidden
+
+    &-wrapper .index__title-slogan-wrapper:nth-child(1)>.index__title-slogan
+      position relative
+      z-index -2
+      text-align center
+      transform rotate(0deg) translateY(0rem)
+      transition transform 1s ease 0.5s
+      @media $mobile
+        text-align start
+    &-wrapper .index__title-slogan-wrapper:nth-child(2)>.index__title-slogan
+      text-align end
+      transform rotate(0deg) translateY(0rem)
+      transition transform 1s ease 0.9s
+      @media $mobile
+        text-align start
+    &-wrapper .index__title-slogan-wrapper:nth-child(3)>.index__title-slogan
+      text-align start
+      transform rotate(0deg) translateY(0rem)
+      transition transform 1s ease 1.3s
+
+  &__desc
+    width 385rem
+    height 102rem
+    position absolute
+    right 50rem
+    top 320rem
+    opacity 1
+    transition opacity 1s ease 2.2s
+    color $white
+    font-size 15rem
+    font-family $ptSansNarrow
+    line-height 22rem
+    letter-spacing -0.02em
+    text-align end
+    @media $mobile
+      position unset
+      width 280rem
+      height 138rem
+      padding-right 20rem
+      padding-top 5rem
+      margin-left 80rem
+
+
+  &__subtitle
+    width 303rem
+    height 100rem
+    position absolute
+    left 70rem
+    top 180rem
+    opacity 1
+    transition opacity 1s ease 2s
+    color $white
+    font-size 36rem
+    line-height 45rem
+    font-family $ptSansNarrow
+    opacity 0.8
+    @media $mobile
+      width unset
+      height unset
+      position unset
+      font-size 36rem
+      line-height 30rem
+      padding-left 20rem
+      padding-top 20rem
+
+.hidden .index__cover
+  transition: transform .6s 0s ease
+  transform: translateX(100%)
+
+
+.hidden .index__title-slogan-wrapper:nth-child(1)>.index__title-slogan
+  transition: transform .6s ease .5s
+  transform rotate(10deg) translateY(220rem)
+
+.hidden .index__title-slogan-wrapper:nth-child(2)>.index__title-slogan
+  transition: transform .6s ease .4s
+  transform rotate(10deg) translateY(220rem)
+
+.hidden .index__title-slogan-wrapper:nth-child(3)>.index__title-slogan
+  transition: transform .6s ease .3s
+  transform rotate(10deg) translateY(240rem)
+
+.hidden .index__desc
+  transition: opacity .6s ease .1s
+  opacity 0
+.hidden .index__subtitle
+  transition: opacity .6s ease .16s
+  opacity 0
+
+.hidden .index__background-img:nth-child(1)
+  transition transform 1s linear
+  transform translateY(100%)
+  // transition: bottom .6s ease 0s
+  // bottom -1000rem
+
+.hidden .index__background-img:nth-child(2)
+  transition transform 1s, opacity 1s
+  transition-delay .1s
+  transition-timing-function ease
+  opacity 0
+  transform scale(0.1)
+
+
+
+  

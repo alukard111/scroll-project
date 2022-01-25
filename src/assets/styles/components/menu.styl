@@ -1,0 +1,95 @@
+.menu_active
+  transform: translateX(-326rem)
+  @media $mobile
+    transform: translateX(-394rem)
+.menu:before 
+  @media $mobile
+    content ' '
+    display block
+    size(100%, 100%)
+    background $blue
+    opacity 0.9
+    position absolute
+    z-index -5
+    top 0
+    left 0
+.menu
+  width 326rem
+  height 100vh
+  background $blue
+  position absolute
+  transform: translateX(-365rem)
+  transition: transform 0.5s ease
+  top 0
+  @media $mobile 
+    display flex
+    align-items center
+    flex-direction: column
+    transform: translateX(-394rem)
+    width 100%
+    height auto
+    background-image  url('/background/backgroundMain.png')
+    background-size cover
+    background-position center
+
+  &__burger
+    @media $mobile
+      margin-top: 20rem;
+
+  &__inner
+    height 100%
+    width 100%
+    display flex
+    justify-content center
+    align-items center
+    font-family $dinProBold
+    font-size 40rem
+    line-height 40rem
+    text-transform uppercase
+  &__list
+    width 100%
+  &__item
+    padding 0rem 15rem 0rem 27rem
+    margin 15rem 0rem
+    height: 110%
+    position relative
+    transition all 0.2s ease
+    cursor pointer
+
+    &:hover:before
+      opacity 1
+      
+    &:hover:after
+      opacity 0.35
+    
+  &__item:before
+    opacity 0
+    content ' '
+    display block
+    background red
+    width 100%
+    height 110%
+    position absolute
+    left 0
+    right 0
+    z-index -2
+    mix-blend-mode: normal
+    transition all 0.2s ease
+    @media $mobile
+      mix-blend-mode color
+  &__item:after
+    opacity: 0
+    content ' '
+    display block
+    background black
+    width 100%
+    height 110%
+    position absolute
+    left 0
+    top 0
+    z-index -1
+    transition all 0.2s ease
+    @media $mobile
+      display: none
+  &__item-link
+    color $white

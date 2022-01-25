@@ -1,0 +1,139 @@
+.video
+  display flex
+  justify-content center
+  align-items center
+  @media $mobile
+    height auto
+    min-height 649rem
+  &__cover
+    background $red
+    mix-blend-mode color
+    width 411rem
+    height 100vh
+    position: absolute
+    top 0
+    left 0rem
+    z-index -3
+    transform translateX(0%)
+    transition all .8s ease 
+    @media $mobile
+      height 284rem
+      width 100%
+
+  &__marquee
+    position absolute
+    z-index -1
+    top 40%
+    width 100%
+    height 185rem
+    background-image url('./assets/imgs/background/string.png')
+    background-size cover
+    background-repeat repeat-x
+    animation tickerS 3s linear infinite
+    transition all .9s ease .8s
+    @media $mobile
+      height 60rem
+      top 360rem
+      animation tickerS 10s linear infinite
+
+  &__main
+    transition all .8s ease 1.5s
+
+  &__main-inner
+    position relative
+    width 800rem
+    height 450rem
+    @media $mobile
+      width 279rem
+      height 156rem
+  &__main-inner::before
+    content ' '
+    width 800rem
+    height 450rem
+    top 0
+    left 0
+    z-index 0
+    background $black
+    opacity 0.5
+    mix-blend-mode color
+    position absolute
+    z-index 1
+    @media $mobile
+      width 279rem
+      height 156rem
+   
+
+  &__main-inner::after
+    background $lightBlue
+    opacity 0.6
+    mix-blend-mode normal
+    content ' '
+    width 800rem
+    height 450rem
+    top 0
+    left 0
+    z-index 0
+    position absolute
+    @media $mobile
+      width 279rem
+      height 156rem
+ 
+  &__main-video-wrapper::after
+    background $blue
+    opacity 0.6
+    mix-blend-mode color
+    content ' '
+    width 800rem
+    height 450rem
+    top 0
+    left 0
+    z-index 0
+    position absolute
+    @media $mobile
+      width 279rem
+      height 156rem
+  
+  &__main-video-wrapper::before
+    content '02.11 в 15:00 состоится пресс конференция со сборной России по хоккею.'
+    color $white
+    display block
+    font-family $ptSansNarrow
+    font-size 35rem
+    line-height 45rem
+    width 560rem
+    height 200rem
+    position absolute
+    left 120rem
+    top 40%
+    z-index 10
+    white-space: pre-wrap
+    text-align: center
+    @media $mobile
+      font-size 20rem
+      line-height 25rem
+      width 279rem
+      height 156rem
+      left 0rem
+      top 40rem
+
+  &__main-video
+    overflow hidden
+    width 800rem
+    height 450rem
+    @media $mobile
+      width 279rem
+      height 156rem
+
+ 
+
+.hidden .video__cover
+  transform translateX(-100%)
+  transition all .8s ease .5s
+   
+.hidden .video__marquee
+  transition all .8s ease .8s
+  opacity 0
+
+.hidden .video__main
+  transition all .8s ease
+  opacity 0

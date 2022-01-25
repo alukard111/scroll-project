@@ -1,0 +1,732 @@
+.news
+  h(70vh)
+  
+  @media $mobile
+    height 1000rem
+  &__cover
+    h(100vh)
+    position absolute
+    top 0
+    right 0
+    background $red
+    mix-blend-mode color
+    width 380rem
+    transition transform 1s ease
+    transform: translateX(0%)
+    z-index -3
+    @media $mobile
+      width 100%
+      max-height 261rem
+      height 219rem
+      right unset
+      top 0
+
+  &__events
+    color $white
+
+    &-wrapper
+      w(500rem)
+      position absolute
+      right -150rem
+      transition opacity .7s ease 1s
+      opacity 1
+      z-index 5
+      
+    &-title
+      width 265rem
+      text-align end
+      @media $mobile
+        display none  
+      
+    &-title-text
+      font-family $ptSansNarrow
+      font-size 16rem
+      line-height 32rem
+      letter-spacing 0.15em
+      text-transform uppercase
+      padding-left 50rem
+      opacity 0.9
+
+    &-games
+      font-size 22rem
+      margin-top 30rem
+      @media $mobile
+        margin-left 30rem
+        margin-top 35rem
+        width 263rem
+        overflow hidden
+        display flex
+        flex-direction column
+    &-game
+      max-width 500rem
+      margin 10rem 0rem
+      font-size 22rem
+      font-family $ptSansNarrow
+      line-height 32rem
+      display flex
+      align-items flex-end
+      @media $mobile
+        width 245rem
+
+      &-wrapper
+        @media $mobile
+          display flex
+          transition all 0.8s ease
+     &-slider
+      display flex
+      width 95rem
+      height 12rem
+      align-self center
+      
+      &-elipse
+        cursor pointer
+        margin 0rem 3.5rem
+        size(10rem)
+        border-radius 50%
+        border 1px solid $white
+        opacity 0.6
+        &_active
+          opacity 1
+          background $white
+
+
+  &__event
+    
+    &-game
+      display flex
+      flex-direction: column
+      justify-content:  flex-end
+      min-width 262rem
+
+      &-teams
+        display flex
+        align-items center
+        justify-content flex-end
+        @media $mobile
+          justify-content center
+
+      &-team
+        display flex
+        align-items center
+
+        &-name
+          margin 0 9rem
+
+      &-date
+        font-size 14rem
+        text-align end
+        opacity 0.8
+        @media $mobile
+          text-align center
+
+    &-score
+      margin-left 10rem
+
+    &-line
+      background $white
+      height 1px
+      width 300rem
+      margin 0 0 15rem 10rem
+      opacity 0.7
+      @media $mobile
+        display none
+      
+    &-teams
+      display flex
+      justify-content flex-end
+
+   
+
+  &__btn-return
+    width 197rem
+    height 25rem
+    font-size 14rem
+    line-height 24rem
+    font-family $ptSansNarrow
+    color white
+    background-image: url("data:image/svg+xml,%3Csvg width='43' height='8' viewBox='0 0 43 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M42.3536 4.48312C42.5488 4.28786 42.5488 3.97127 42.3536 3.77601L39.1716 0.594032C38.9763 0.39877 38.6597 0.39877 38.4645 0.594032C38.2692 0.789294 38.2692 1.10588 38.4645 1.30114L41.2929 4.12957L38.4645 6.95799C38.2692 7.15325 38.2692 7.46984 38.4645 7.6651C38.6597 7.86036 38.9763 7.86036 39.1716 7.6651L42.3536 4.48312ZM-4.37114e-08 4.62956L42 4.62957L42 3.62957L4.37114e-08 3.62956L-4.37114e-08 4.62956Z' fill='white'/%3E%3C/svg%3E%0A");
+    background-repeat no-repeat
+    background-position 108rem center
+    text-align start
+    &-wrapper
+      opacity 0.7
+      width 197rem
+      height 25rem
+      position absolute
+      left -117rem
+      top 230rem
+      transform rotate(-90deg)
+      @media $mobile
+        transform unset
+        top 790rem
+        left -50rem
+      &:hover
+        opacity 0.9
+      &:active
+        opacity 0.5
+      
+
+  &__btn-prev-page
+    font-family $ptSansNarrow
+    font-size 12rem
+    text-decoration underline
+    color $white
+    &-wrapper
+      position absolute
+      top -10rem
+      left -37rem
+      cursor pointer
+      transition all 0.2s linear
+      z-index 5
+      @media $mobile
+        top -25rem
+        left -58rem
+      &:hover
+        opacity 0.5
+      &:active
+        opacity 0.8
+
+
+  &__main
+    display flex
+    &-btn
+      font-family $ptSansNarrow
+      font-size 16rem
+      color white
+    &-btn-wrapper
+      cursor pointer
+      display flex
+      align-items: center
+      justify-content: center
+      width 113rem
+      height 30rem
+      background none
+      border 1px solid $white
+      position: absolute
+      z-index 1
+      left 317rem
+      bottom 80rem
+      @media $mobile
+        left 20rem
+        bottom 160rem
+      
+      transition all 0.4s ease
+      &:hover .news__main-btn
+        color black
+      &:hover
+        border none
+        background white
+    &-news-wrapper
+      w(803rem)
+      h(596rem)
+      margin 74rem 0rem 0rem 0rem
+      position absolute
+      top 0
+      left 77rem
+    &-news
+      display flex
+      flex-wrap wrap
+      @media $mobile
+        flex-direction column
+        position absolute
+        top 172rem
+        left -52rem
+     
+  &__topic
+    color $white
+    font-family $ptSansNarrow
+    position relative 
+    @media $mobile
+      margin-left 0rem !important
+    
+    &-inner
+      cursor pointer
+      overflow hidden 
+    
+    &-date
+      opacity 0.8
+      font-weight 400
+      font-size 16rem
+      transition all 0.5s ease
+      @media $mobile
+        font-size 12rem
+        line-height 32rem
+
+    &-desc
+      opacity 0.8
+      font-size 24rem
+      padding-left 11rem
+      transition all 0.5s ease
+      @media $mobile
+        font-size 20rem
+        line-height 25rem
+  &__btn
+    opacity 0
+    transition: all 0.4s ease
+    font-size 16rem
+    display flex
+    align-items center
+    margin-left 50rem
+    @media $mobile
+      font-size 14rem
+      line-height 24rem
+
+    &-link
+      margin-right 10rem
+
+  &__main-news
+    transition all 0.3s ease
+
+    &_opacity 
+      opacity 0
+    &>.news__topic:nth-child(1)
+      margin-top 10rem
+      @media $mobile
+        margin-top 0rem
+      
+      &:hover::before,
+      &:hover::after,
+      &:hover .news__btn,
+      &:hover .news__topic-inner,
+      &:hover .news__topic-date,
+      &:hover .news__topic-desc
+        transition all .5s ease 
+        opacity 1
+
+      &:hover::before,
+      &:hover::after
+        transform rotateY(180deg)
+      &:hover .news__btn>img
+        animation flyArrow 1s ease infinite
+
+      &::before
+        transform rotateY(0deg)
+        perspective 200rem
+        opacity: 0
+        content ' '
+        width 258rem
+        height 165rem
+        background-color red
+        background-image url('./assets/imgs/icon/backgroundHover.png')
+        background-repeat no-repeat
+        background-position center
+        background-size cover
+        position absolute
+        z-index -2
+        left 120rem
+        top 30rem
+        transition: all 0.5s ease
+        @media $mobile
+          width 180rem
+          height 120rem
+          left 85rem
+          top 15rem
+
+      &::after
+        transform rotateY(0deg)
+        perspective 200rem
+        opacity: 0
+        content ' '
+        width 258rem
+        height 165rem
+        background $blue;
+        position absolute
+        z-index -2
+        left 120rem
+        top 30rem
+        mix-blend-mode hard-light
+        transition: all 0.5s ease
+        @media $mobile
+          width 180rem
+          height 120rem
+          left 85rem
+          top 15rem
+      
+      &>.news__topic-inner
+        &>.news__topic-data-wrapper
+          transform translateY(0%)
+          opacity 1
+          transition all 1s ease .7s
+          
+
+        &>.news__topic-data-wrapper>.news__topic-date
+          opacity 0.8
+          margin-right 11rem
+          font-weight 400
+          font-size 30rem
+          @media $mobile
+            font-size 14rem
+            line-height 32rem
+        &>.news__topic-desc-wrapper
+          transform translateY(0%)
+          opacity 1
+          transition all 1s ease .5s
+        &>.news__topic-desc-wrapper>.news__topic-desc
+          opacity 1
+          font-size 60rem
+          line-height 65rem
+          font-weight 700
+          @media $mobile
+            font-size: 30rem
+            line-height 35rem
+        &>.news__btn
+          margin-left 100rem
+          
+      
+    &>.news__topic:nth-child(2)
+      display flex
+      align-items flex-end
+      margin-left 62rem
+      &:hover::before,
+      &:hover::after,
+      &:hover .news__btn,
+      &:hover .news__topic-date,
+      &:hover .news__topic-desc
+        opacity 1
+      
+      &:hover::before,
+      &:hover::after
+        transform rotateY(180deg)
+
+      &:hover .news__btn>img
+        animation flyArrow 1s ease infinite
+
+      &::before
+        transform rotateY(0deg)
+        perspective 200rem
+        opacity 0
+        content ' '
+        width 161rem
+        height 100rem
+        background-image url('./assets/imgs/icon/backgroundHover.png')
+        background-repeat no-repeat
+        background-position center
+        background-size cover
+        position absolute
+        z-index -2
+        left 70rem
+        top 40rem
+        transition: all 0.5s ease
+        @media $mobile
+          left 85rem
+          top 15rem
+
+      &::after
+        transform rotateY(0deg)
+        perspective 200rem
+        opacity 0
+        content ' '
+        width 161rem
+        height 100rem
+        background $blue;
+        position absolute
+        z-index -2
+        left 70rem
+        top 40rem
+        mix-blend-mode: hard-light;
+        transition: all 0.5s ease
+        @media $mobile
+          left 85rem
+          top 15rem
+
+      &>.news__topic-inner
+        &>.news__topic-data-wrapper
+          transform translateY(0%)
+          opacity 1
+          transition all 1s ease 1.8s
+        &>.news__topic-desc-wrapper
+          transform translateY(0%)
+          opacity 1
+          transition all .8s ease 1.3s
+
+    &>.news__topic:nth-child(3)
+      margin-top 0rem
+      margin-left 120rem
+    
+      &:hover::before,
+      &:hover::after,
+      &:hover .news__btn,
+      &:hover .news__topic-date,
+      &:hover .news__topic-desc
+        opacity 1
+       
+      &:hover::before,
+      &:hover::after
+        transform rotateY(180deg)
+      
+      &:hover .news__btn>img
+        animation flyArrow 1s ease infinite
+       
+
+      &::before
+        transform rotateY(0deg)
+        perspective 200rem
+        opacity 0
+        content ' '
+        width 206rem
+        height 130rem
+        background-image url('./assets/imgs/icon/backgroundHover.png')
+        background-repeat no-repeat
+        background-position center
+        background-size cover
+        position absolute
+        z-index -2
+        right 55rem
+        top 10rem
+        transition: all 0.5s ease
+        @media $mobile
+          width 180rem
+          height 120rem
+          left 85rem
+          top 15rem
+
+      &::after
+        transform rotateY(0deg)
+        perspective 200rem
+        opacity 0
+        content ' '
+        width 206rem
+        height 130rem
+        background $blue;
+        position absolute
+        z-index -2
+        right 55rem
+        top 10rem
+        mix-blend-mode hard-light
+        transition: all 0.5s ease
+        @media $mobile
+          width 180rem
+          height 120rem
+          left 85rem
+          top 15rem
+      
+      &>.news__topic-inner
+        &>.news__topic-data-wrapper
+          transform translateY(0%)
+          opacity 1
+          transition all 1s ease 2.8s
+        &>.news__topic-desc-wrapper
+          transform translateY(0%)
+          opacity 1
+          transition all .8s ease 2.3s
+    
+    &>.news__topic:nth-child(4)
+      margin-top 37rem
+      @media $mobile
+        margin-top 0rem
+      &:hover::before,
+      &:hover::after,
+      &:hover .news__btn,
+      &:hover .news__topic-date,
+      &:hover .news__topic-desc
+        opacity 1
+
+      &:hover::before,
+      &:hover::after
+        transform rotateY(180deg)
+      &:hover .news__btn>img
+        animation flyArrow 1s ease infinite
+
+      &::before
+        transform rotateY(0deg)
+        perspective 200rem
+        opacity 0
+        content ' '
+        width 206rem
+        height 130rem
+        background-image url('./assets/imgs/icon/backgroundHover.png')
+        background-repeat no-repeat
+        background-position center
+        background-size cover
+        position absolute
+        z-index -2
+        right 55rem
+        top 10rem
+        transition: all 0.5s ease
+        @media $mobile
+          width 180rem
+          height 120rem
+          left 85rem
+          top 15rem
+
+      &::after
+        transform rotateY(0deg)
+        perspective 200rem
+        opacity 0
+        content ' '
+        width 206rem
+        height 130rem
+        background $blue;
+        position absolute
+        z-index -2
+        right 55rem
+        top 10rem
+        mix-blend-mode: hard-light;
+        transition: all 0.5s ease
+        @media $mobile
+          width 180rem
+          height 120rem
+          left 85rem
+          top 15rem
+      &>.news__topic-inner
+        &>.news__topic-data-wrapper
+          transform translateY(0%)
+          opacity 1
+          transition all 1s ease 3.6s
+        &>.news__topic-desc-wrapper
+          transform translateY(0%)
+          opacity 1
+          transition all .8s ease 3.1s
+
+        &>.news__topic-data-wrapper>.news__topic-date
+          font-size 24rem
+          @media $mobile
+            font-size 12rem
+        
+        &>.news__topic-desc-wrapper>.news__topic-desc
+          font-size 30rem
+          @media $mobile
+            font-size 24rem
+
+    &>.news__topic:nth-child(5)
+      margin-top 37rem
+      margin-left 243rem
+      @media $mobile
+        margin-top 0rem
+
+      &:hover::before,
+      &:hover::after,
+      &:hover .news__btn,
+      &:hover .news__topic-date,
+      &:hover .news__topic-desc
+        opacity 1
+
+      &:hover::before,
+      &:hover::after
+        transform rotateY(180deg)
+        
+      &:hover .news__btn>img
+        animation flyArrow 1s ease infinite
+
+      &::before
+        transform rotateY(0deg)
+        perspective 200rem
+        opacity 0
+        content ' '
+        width 161rem
+        height 100rem
+        background-image url('./assets/imgs/icon/backgroundHover.png')
+        background-repeat no-repeat
+        background-position center
+        background-size cover
+        position absolute
+        z-index -2
+        right -40rem
+        top 10rem
+        transition all 0.5s ease
+        @media $mobile
+          width 180rem
+          height 120rem
+          left 85rem
+          top 15rem
+      &::after
+        transform rotateY(0deg)
+        perspective 200rem
+        opacity 0
+        content ' '
+        width 161rem
+        height 100rem
+        background $blue;
+        position absolute
+        z-index -2
+        right -40rem
+        top 10rem
+        mix-blend-mode hard-light
+        transition all 0.5s ease
+        @media $mobile
+          width 180rem
+          height 120rem
+          left 85rem
+          top 15rem
+      &>.news__topic-inner
+        &>.news__topic-data-wrapper
+          transform translateY(0%)
+          opacity 1
+          transition all 1s ease 4.6s
+        &>.news__topic-desc-wrapper
+          transform translateY(0%)
+          opacity 1
+          transition all .8s ease 4.1s
+
+.hidden .news__cover
+  transition transform .6s ease .3s
+  transform: translateX(100%)
+
+
+
+.hidden .news__main>.news__events-wrapper
+  transition opacity .6s ease .1s
+  opacity 0
+
+.hidden .news__topic:nth-child(1)>.news__topic-inner>.news__topic-data-wrapper
+  transform translateY(-300rem)
+  opacity 0
+  transition all .6s ease .2s
+
+.hidden .news__topic:nth-child(1)>.news__topic-inner>.news__topic-desc-wrapper
+  transform translateY(-300rem)
+  opacity 0
+  transition all .6s ease .4s
+
+.hidden .news__topic:nth-child(1)
+  &:hover::before,
+  &:hover::after,
+  &:hover .news__btn,
+  &:hover .news__topic-inner,
+  &:hover .news__topic-date,
+  &:hover .news__topic-desc
+    display none
+
+
+
+
+.hidden .news__topic:nth-child(2)>.news__topic-inner>.news__topic-data-wrapper
+  transform translateY(-200rem)
+  opacity 0
+  transition all .6s ease .2s
+
+.hidden .news__topic:nth-child(2)>.news__topic-inner>.news__topic-desc-wrapper
+  transform translateY(-200rem)
+  opacity 0
+  transition all .6s ease .4s
+
+.hidden .news__topic:nth-child(3)>.news__topic-inner>.news__topic-data-wrapper
+  transform translateY(-200rem)
+  opacity 0
+  transition all .6s ease .2s
+
+.hidden .news__topic:nth-child(3)>.news__topic-inner>.news__topic-desc-wrapper
+  transform translateY(-200rem)
+  opacity 0
+  transition all .6s ease .4s
+  
+.hidden .news__topic:nth-child(4)>.news__topic-inner>.news__topic-data-wrapper
+  transform translateY(-200rem)
+  opacity 0
+  transition all .6s ease .2s
+
+.hidden .news__topic:nth-child(4)>.news__topic-inner>.news__topic-desc-wrapper
+  transform translateY(-200rem)
+  opacity 0
+  transition all .6s ease .4s
+
+.hidden .news__topic:nth-child(5)>.news__topic-inner>.news__topic-data-wrapper
+  transform translateY(-200rem)
+  opacity 0
+  transition all .6s ease .2s
+
+.hidden .news__topic:nth-child(5)>.news__topic-inner>.news__topic-desc-wrapper
+  transform translateY(-200rem)
+  opacity 0
+  transition all .6s ease .4s
+  

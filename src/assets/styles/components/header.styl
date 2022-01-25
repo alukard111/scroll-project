@@ -1,0 +1,79 @@
+
+.header
+  h(15vh)
+  padding 0rem 40rem
+  opacity 0
+  animation opacityOff 1s ease alternate 3s
+  animation-fill-mode forwards
+  position relative
+  z-index 5
+  @media $mobile
+    h(10vh)
+    padding 0rem 20rem
+  &__menu-btn
+    width 20rem
+    height 20rem
+    background white
+    &:hover
+      background gray
+  &__wrapper
+    size(100%, 100%)
+    padding-top 31rem
+    @media $mobile
+      padding-top 21rem
+
+    
+  &__logo-wrapper
+    display flex
+    justify-content space-between
+    align-items start
+  
+  &__share
+    display flex
+    align-items center
+    flex-direction: column-reverse
+
+  &__logo
+    w(100rem)
+    cursor pointer
+    &_share
+      w(24rem)
+      h(24rem)
+      margin 2rem 4rem 2rem 0rem
+    &_index
+      w(161rem)
+      @media $mobile
+        w(100rem)
+    &_baltika
+      w(102rem)
+      h(62rem)
+
+.header__menu-burger 
+  display inline-block
+  cursor pointer
+  width 14rem
+  height 10rem
+  padding-right 65rem
+  @media $mobile
+    padding-right 0rem
+
+
+.bar1, .bar2, .bar3 
+  width 16rem
+  height 2rem
+  background-color $white
+  margin 2rem 0
+  transition 0.4s
+
+
+.header__menu-burger_active .bar1
+  -webkit-transform rotate(-45deg) translate(-2rem, 3rem)
+  transform rotate(-45deg) translate(-2rem, 3rem)
+
+.header__menu-burger_active .bar2 
+  opacity 0
+
+.header__menu-burger_active .bar3 {
+  -webkit-transform rotate(45deg) translate(-3rem, -4rem)
+  transform rotate(45deg) translate(-3rem, -4rem)
+}

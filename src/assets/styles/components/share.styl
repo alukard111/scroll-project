@@ -1,0 +1,106 @@
+.share
+ 
+  &__title-wrapper
+    color $white
+    font-family $dinProBold
+    font-size 100rem
+    line-height 60rem
+    text-transform: uppercase
+  
+  &__title
+    width 500rem
+    height 90rem
+    
+  &__title-inner
+    display flex
+    justify-content center
+    align-items center
+    width 500rem
+    height 90rem
+    overflow hidden  
+  
+  &__title:nth-child(1):before
+    content ' '
+    display block
+    width: 602rem
+    height 38rem
+    position absolute
+    bottom -10rem
+    left -210rem
+    background $red
+    mix-blend-mode normal
+    z-index -1
+
+  &__title:nth-child(1):after
+    content ' '
+    display block
+    width: 602rem
+    height 38rem
+    position absolute
+    bottom -10rem
+    left -210rem
+    background $black
+    opacity 0.35
+    z-index -1
+
+  &__title:nth-child(5):before
+    content ' '
+    display block
+    width: 602rem
+    height 38rem
+    position absolute
+    bottom -10rem
+    left 210rem
+    background $red
+    mix-blend-mode normal
+    z-index -1
+
+  &__title:nth-child(5):after
+    content ' '
+    display block
+    width: 602rem
+    height 38rem
+    position absolute
+    bottom -10rem
+    left 210rem
+    background $black
+    opacity 0.35
+    z-index -1
+  
+  &__title:nth-child(1)
+    position absolute
+    top 117rem
+    left 208rem
+
+  &__title:nth-child(2)
+    position absolute
+    left 600rem
+    top 226rem
+  
+  &__title:nth-child(3)
+    position absolute
+    left 124rem
+    top 337rem
+
+  &__title:nth-child(4)
+    position absolute
+    left 411rem
+    top 337rem
+    
+  &__title:nth-child(5)
+    position absolute
+    right 304rem
+    top 448rem
+  
+  &__desc-wrapper
+    font-family $ptSansNarrow
+    font-size 24rem
+    width 308rem
+    height 74rem
+    line-height 30rem
+    opacity 0.9
+    color $white
+    position absolute
+    left 140rem
+    top 236rem
+    

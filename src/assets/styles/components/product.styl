@@ -1,0 +1,159 @@
+
+.product__background-img-wrapper
+  position absolute
+  width 100%
+  height 100%
+
+.product__background-img:nth-child(1)
+  content ' '
+  width 761rem
+  height 694rem
+  position absolute
+  left -200rem
+  bottom 0
+  z-index -1
+  transition all .6s linear .2s
+  @media $mobile
+    width 380rem
+    height 330rem
+    bottom 50rem
+    left unset
+    
+.product__background-img:nth-child(2)
+  content ' '
+  width 348rem
+  height 636rem
+  position absolute
+  right 0
+  bottom 0rem
+  z-index -1
+  transition transform .8s linear 2.5s
+  transform translateY(0%)
+  @media $mobile
+    width 120rem
+    height 250rem
+    top 0rem
+    left 0rem
+    transform rotate(-20deg) translate(0%, 0%)
+    z-index -4
+
+
+.product
+  height 70vh
+  @media $mobile
+    height auto
+    min-height 649rem
+  &__cover
+    background $red
+    mix-blend-mode color
+    width 461rem
+    height 100vh
+    position: absolute
+    top 0
+    left 0%
+    z-index -3
+    transition all .6s linear .2s
+    transform: translateX(0%)
+    @media $mobile
+      z-index -5
+      height 225rem
+      width 100%
+      top unset
+      bottom 0rem
+
+
+  &__main
+    width 100%
+    height 100%
+    &>.product__main-slogan-wrapper:nth-child(4)
+      position absolute
+      top 530rem
+      left 27rem
+      @media $mobile
+        bottom unset
+        left 0rem
+        top 250rem
+      &>.product__main-slogan
+        transition all .6s ease 2.4s
+    &>.product__main-slogan-wrapper:nth-child(3)
+      position absolute
+      top 380rem
+      left 297rem
+      @media $mobile
+        bottom unset
+        left 138rem
+        top 200rem
+      &>.product__main-slogan
+        transition all .6s ease 1.8s
+    &>.product__main-slogan-wrapper:nth-child(2)
+      position absolute
+      top 230rem
+      left 425rem
+      z-index -2
+      @media $mobile
+        bottom unset
+        left 89rem
+        top 150rem
+      &>.product__main-slogan
+        transition all .6s ease 1.2s
+    &>.product__main-slogan-wrapper:nth-child(1)
+      width 1000rem
+      height 155rem
+      position absolute
+      top 80rem
+      left 110rem
+      z-index -2
+      @media $mobile
+        width unset
+        height unset
+        bottom unset
+        left 42rem
+        top 100rem
+      &>.product__main-slogan
+        transition all .6s ease .6s
+    &-slogan
+      font-size 140rem
+      font-family $dinProBold
+      text-transform uppercase
+      line-height 140rem
+      letter-spacing 0.18em
+      color $white
+      @media $mobile
+        font-size 47rem
+        line-height 50rem
+    
+      &-wrapper
+        overflow hidden
+      &-text
+        white-space nowrap
+
+  
+.hidden .product__main-slogan-wrapper:nth-child(4)>.product__main-slogan
+  transition transform .6s ease
+  transform rotate(10deg) translateY(180%)
+
+.hidden .product__main-slogan-wrapper:nth-child(3)>.product__main-slogan
+  transition transform .6s ease
+  transform rotate(10deg) translateY(180%)
+
+.hidden .product__main-slogan-wrapper:nth-child(2)>.product__main-slogan
+  transition transform .6s ease
+  transform rotate(10deg) translateY(180%)
+
+.hidden .product__main-slogan-wrapper:nth-child(1)>.product__main-slogan
+  transition transform .6s ease
+  transform rotate(10deg) translateY(180%)
+
+.hidden .product__background-img:nth-child(1)
+  transition transform .6s ease
+  transform translateX(-100%)
+  
+.hidden .product__background-img:nth-child(2)
+  transition transform .6s ease
+  transform translateY(100%)
+  @media $mobile
+    transform rotate(-20deg) translate(-100%, 0%) 
+
+.hidden .product__cover
+  transition transform .6s ease
+  transform: translateX(-100%)

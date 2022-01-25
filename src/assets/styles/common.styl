@@ -1,0 +1,98 @@
+html
+	ff $os
+	font-size vh(1, 720)
+	@media (max-aspect-ratio: 8/5) 
+		font-size vw(1, 1280)
+		@media $mobile
+			font-size vm(1, 375)
+body
+	oh()
+	@media $mobile
+		// height: -webkit-fill-available;
+		overflow auto
+.main
+	h(100vh)
+	w(100%)
+	overflow hidden
+	@media $mobile
+		height auto
+
+.main__inner_active
+	margin-left 325rem
+	@media $mobile
+		margin-left 374rem
+	
+
+.main__inner
+	h(100vh)
+	w(100%)
+	display flex
+	flex-direction column
+	justify-content space-between
+	position: relative
+	transition all 0.3s ease
+	@media $mobile
+		height auto
+
+.main__container
+	@media $mobile
+		height auto
+		
+		
+.main__inner:after
+	content ' '
+	display block
+	size(100%, 100vh)
+	background-image url('/background/backgroundMain.png')
+	background-size cover
+	background-position center
+	position absolute
+	z-index -6
+	top 0
+	left 0
+	@media $mobile
+		min-height 100%
+		width 100%
+		height auto
+
+.main__inner:before
+	content ' '
+	display block
+	size(100%, 100vh)
+	background $blue
+	opacity 0.9
+	position absolute
+	z-index -5
+	top 0
+	left 0
+	@media $mobile
+		min-height 100%
+		width 100%
+		height auto
+
+.btn__prev-page
+	font-family $ptSansNarrow
+	font-size 12rem
+	text-decoration underline
+	color $white
+	&-wrapper
+		position absolute
+		top 70rem
+		left 40rem
+		cursor pointer
+		transition all 0.2s linear
+		z-index 5
+		@media $mobile
+			top 50rem
+			left 20rem
+		&:hover
+			opacity 0.5
+		&:active
+			opacity 0.8
+
+.ya-share2__list
+	display flex !important
+	flex-direction column !important
+
+.ya-share2__badge
+	background none !important
